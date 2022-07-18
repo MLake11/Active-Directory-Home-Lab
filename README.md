@@ -1,6 +1,6 @@
-<h1>Disk Sanitization</h1>
+<h1>How to setup an Active Directory Lab at home</h1>
 
- ### [YouTube Demonstration](https://youtu.be/7eJexJVCqJo)
+
 
 <h2>Description</h2>
 In this project, I learned how to create an Active Directory home lab Environment using Oracle Virtual Box. I configured and ran this lab to help develop my understanding of how active directory and windows networking works.  
@@ -9,42 +9,80 @@ In this project, I learned how to create an Active Directory home lab Environmen
 
 <h2>Languages and Utilities Used</h2>
 
-- <b>PowerShell</b> 
-- <b>Diskpart</b>
+- <b>Oracle Virutal Box</b> 
+- <b>Windows Powershell</b>
 
 <h2>Environments Used </h2>
 
-- <b>Windows 10</b> (21H2)
+- <b>Windows 10</b>
 
 <h2>Program walk-through:</h2>
 
 <p align="center">
-Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+First, download Virtual Box: <br/>
+<img src="https://i.imgur.com/ff5SfxA.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Select the disk:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Next, you want to head over to microsoft and download the Windows 10 ISO (64 bit) <br/>
+<img src="https://i.imgur.com/tV6CfAi.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+After installing the virtual machine manager, open it up and add your ISO <br/>
+<img src="https://i.imgur.com/pm9Cf1J.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Next, install Windows 10 <br/>
+<img src="https://i.imgur.com/5CS1yL6.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/ZaMH1HE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Assign IP address to internal adapter <br/>
+<img src="https://i.imgur.com/YUG8uBm.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+After that, using Mydomain.com, go ahead and promote the domain controller <br/>
+<img src="https://i.imgur.com/fHzTymw.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+ <br />
+<br />
+Next, Install and configure Routing and Remote Access (also known as RAS/NAT) <br/>
+<img src="https://i.imgur.com/LUFMDPX.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Install and configure DHCP <br/>
+<img src="https://i.imgur.com/4lAheG1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Enable browsing on the machine <br/>
+<img src="https://i.imgur.com/w4gzjVT.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Add users to your network using a Powershell script (https://github.com/MLake11/Create-Users-Powershell-Script/blob/main/README.md)  <br/>
+<img src="https://i.imgur.com/A5kvm2Y.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Wait for all users to be added  <br/>
+<img src="https://i.imgur.com/jDta2zq.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+ Create Windows 10 VM <br/>
+<img src="https://i.imgur.com/I6KhoKD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+ Install Windows 10 OS <br/>
+<img src="https://i.imgur.com/0MqfpNm.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br /> 
+ 
+ Join Windows 10 to domain <br/>
+<img src="https://i.imgur.com/qugYksq.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+
+ Login to Client1 with Domain Credentials
+ <img src="https://i.imgur.com/hmTkK1F.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
 <!--
